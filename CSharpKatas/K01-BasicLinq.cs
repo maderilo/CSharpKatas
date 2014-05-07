@@ -6,15 +6,18 @@ namespace CSharpKatas
     {
         public int SumNumbers(int start, int count)
         {
-            // todo #1: Remove the Ignore attribute and get all the tests passing
-            // todo #2: Refactor so there are no loops or if statements (this is the functional approach and is idiomatic for C#)
-            // todo #3: Refactor to use the Aggregate() LINQ method (see 101 Linq Samples: http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-            return 0;
+            int result = 0;
+            for (int i = 0; i < count; i++)
+            {
+                result += start + i;
+            }
+                // todo #2: Refactor so there are no loops or if statements (this is the functional approach and is idiomatic for C#)
+                // todo #3: Refactor to use the Aggregate() LINQ method (see 101 Linq Samples: http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+            return result;
         }
     }
 
     [TestFixture]
-    [Ignore]
     public class Test
     {
         [Test]

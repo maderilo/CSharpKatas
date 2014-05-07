@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpKatas", "CSharpKatas\CSharpKatas.csproj", "{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLauncher", "AppLauncher\AppLauncher.csproj", "{B1212699-F548-457E-BD53-9E288143947D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1212699-F548-457E-BD53-9E288143947D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1212699-F548-457E-BD53-9E288143947D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1212699-F548-457E-BD53-9E288143947D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1212699-F548-457E-BD53-9E288143947D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
