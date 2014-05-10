@@ -1,4 +1,7 @@
 ﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpKatas
 {
@@ -6,14 +9,16 @@ namespace CSharpKatas
     {
         public int SumNumbers(int start, int count)
         {
-            int result = 0;
-            for (int i = 0; i < count; i++)
+            try
             {
-                result += start + i;
+                IEnumerable<int> rangeNumbers = Enumerable.Range(start, count);
+                return rangeNumbers.Sum();
             }
-                // todo #2: Refactor so there are no loops or if statements (this is the functional approach and is idiomatic for C#)
-                // todo #3: Refactor to use the Aggregate() LINQ method (see 101 Linq Samples: http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-            return result;
+            catch (System.Exception)
+            {
+                return 0;
+            }
+            // todo #3: Refactor to use the Aggregate() LINQ method (see 101 Linq Samples: http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
         }
     }
 
@@ -59,6 +64,20 @@ namespace CSharpKatas
         {
             var kata = new Calculator();
             Assert.AreEqual(5050, kata.SumNumbers(1, 100));
+        }
+
+        [Test]
+        public void SumNumbers_NextIsNegative_TotalIs0()
+        {
+            var kata = new Calculator();
+            Assert.AreEqual(0,kata.SumNumbers(1, -100));
+        }
+
+        [Test]
+        public void SumNumbers_StartAtInt32MaxValueSumNext2_TotalIs0()
+        {
+            var kata = new Calculator();
+            Assert.AreEqual(0,kata.SumNumbers(Int32.MaxValue, 2));
         }
     }
 }
