@@ -12,13 +12,12 @@ namespace CSharpKatas
             try
             {
                 IEnumerable<int> rangeNumbers = Enumerable.Range(start, count);
-                return rangeNumbers.Sum();
+                return rangeNumbers.Aggregate((a, b) => a + b); //Sum performance is better http://stackoverflow.com/questions/11030109/aggregate-vs-sum-performance-in-linq
             }
             catch (System.Exception)
             {
                 return 0;
             }
-            // todo #3: Refactor to use the Aggregate() LINQ method (see 101 Linq Samples: http://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
         }
     }
 
