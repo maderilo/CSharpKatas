@@ -17,9 +17,13 @@ namespace CSharpKatas
 
         public IEnumerable<string> DoFizzBuzzUpTo(int n)
         {
-            // todo #2: implement a FizzBuzz generator without using any foreach or any if statements
+            IEnumerable<int> r = Enumerable.Range(1,n);
+            var enumerator = r.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                yield return MapNumber(enumerator.Current);
+            }
             // todo #3: Refactor to use a "Method Group"
-            return null;
         }
     }
 
@@ -55,7 +59,6 @@ namespace CSharpKatas
         }
 
         [Test]
-        [Ignore]
         public void DoFizzBuzzUpTo()
         {
             var actual = new K03FizzBuzz().DoFizzBuzzUpTo(36).ToList();
