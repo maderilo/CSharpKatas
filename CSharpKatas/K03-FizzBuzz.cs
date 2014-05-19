@@ -8,8 +8,11 @@ namespace CSharpKatas
     {
         public string MapNumber(int i)
         {
-            // todo #1: Remove the Ignore attribute, implement FizzBuzz (http://en.wikipedia.org/wiki/Bizz_buzz) for a single input
-            return null;
+            string result = "";
+            if (i % 3 == 0) result += "Fizz ";
+            if (i % 5 == 0) result += "Buzz";
+            if (i % 5 != 0 && i % 3 != 0) result = i.ToString();
+            return result.Trim();
         }
 
         public IEnumerable<string> DoFizzBuzzUpTo(int n)
@@ -21,7 +24,6 @@ namespace CSharpKatas
     }
 
     [TestFixture]
-    [Ignore]
     public class FizzBuzz
     {
         [Test]
@@ -53,6 +55,7 @@ namespace CSharpKatas
         }
 
         [Test]
+        [Ignore]
         public void DoFizzBuzzUpTo()
         {
             var actual = new K03FizzBuzz().DoFizzBuzzUpTo(36).ToList();

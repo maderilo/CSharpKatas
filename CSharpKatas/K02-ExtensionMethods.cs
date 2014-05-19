@@ -24,6 +24,7 @@ namespace CSharpKatas
 
 
     [TestFixture]
+    [Ignore]
     public class TestExtensionMethods
     {
         [Test]
